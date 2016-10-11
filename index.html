@@ -1,37 +1,35 @@
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="app.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans:600,400" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<h1>URL Launcher Settings</h1>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<section>
+  <img class="logo" src="opentrigger-logo.png" width="80px" height="80px" />
+  <h1>OpenTrigger</h1>
 
-		<div id="variable-list-header">Available URL Variables</div>
-		<ul id="variable-list">
-			<li>[[latitude]]</li>
-			<li>[[longitude]]</li>
-		</ul>
+  <h3>Set a meaningful name and a URI per menu item.</h3>
 
-		<ul id="url-list">
-		</ul>
-		<div class="clear-fix"></div>
-		<div id="url-add">Add URL</div>
+  <ul id="url-list">
+  </ul>
+  <div id="url-add">Add</div>
 
-		<button id="save-to-pebble">Save to Pebble</button>
+  <button id="save-to-pebble">Save</button>
 
-		<!-- javascript templates -->
-		<div id="url-template">
-			<li>
-				<div class="url-remove">Remove URL</div>
-				<div class="url-info">
-					<input type="text" class="title" value="{{title}}" placeholder="Example" />
-					<input type="url" class="url" value="{{url}}" placeholder="https://www.example.com" />
-				</div>
-				<div class="clear-fix"></div>
-			</li>
-		</div>
-	</body>
+  <footer><a href="http://www.opentrigger.com">opentrigger.com</a></footer>
+
+  <div id="url-template">
+    <li>
+      <div class="url-remove">Remove</div>
+      <div class="url-info">
+        <input type="text" class="title" value="{{title}}" placeholder="Example" required/>
+        <input type="url" class="url" value="{{url}}" placeholder="https://www.example.com" required
+               pattern="https?://.+" data-com.agilebits.onepassword.user-edited="yes"/>
+      </div>
+    </li>
+  </div>
+</section>
+</body>
 </html>
